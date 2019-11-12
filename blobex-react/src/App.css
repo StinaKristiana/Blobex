@@ -1,0 +1,99 @@
+
+.full-screen{
+  height: 100vh;
+  width: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .25rem;
+  border: 1px solid #ced4da;
+
+}
+
+
+.form-container{
+  background-color: whitesmoke;
+  padding: 0;
+  width: 80%;
+  margin: 0;
+  border-radius: .25rem;
+  border: 1px solid #ced4da;
+} 
+
+.form-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin: 0;
+  border-radius: .25rem;
+}
+
+.form-header h1{
+  color:#21A25F;
+  font-size: 2vh;
+margin: auto;
+font-weight: bold;
+border-radius: .25rem;
+
+
+}
+
+.form-sub-header{
+background-color: #F2F7F4;
+border-top: 1px lightgrey solid;
+border-bottom: 1px lightgrey solid;
+border-radius: .25rem;
+
+
+}
+
+.form-sub-header h2{
+color: #21A25F;
+font-size: 1.5vh;
+margin: auto 2%;
+padding: 5px 0;
+font-weight: bold;
+text-transform: capitalize;
+opacity: 0.8;
+border-radius: .25rem;
+
+}
+
+.form-lable{
+  /* display: block; */
+  width: 100%;
+  background: white
+}
+
+.form-date{
+  border: none;
+    color: #495057;
+  width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    /* border: 1px solid #ced4da; */
+    border-radius: .25rem;
+    
+   
+}
+
+
+.form-group{
+display: flex;
+align-items: flex-start;
+flex-direction: column;
+/* align-items: flex-end; */
+height: fit-content;
+margin: 0;
+padding: 0;
+
+
+
+}
