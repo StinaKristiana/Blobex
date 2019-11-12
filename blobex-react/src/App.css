@@ -2,32 +2,33 @@
 .full-screen{
   height: 100vh;
   width: 100%;
-  background-color: whitesmoke;
+  background-color: #096a71;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: .25rem;
   border: 1px solid #ced4da;
-
 }
 
 
 .form-container{
-  background-color: whitesmoke;
-  padding: 0;
+  background-color: white;
+  /* padding: 0.5rem; */
   width: 80%;
   margin: 0;
-  border-radius: .25rem;
+  border-radius: .7rem;
   border: 1px solid #ced4da;
+  box-shadow: 1px 1px 40px -15px rgba(0, 0, 0, 0.774);
+
 } 
 
 .form-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
   margin: 0;
-  border-radius: .25rem;
+  padding: 0.5rem; 
+  border-radius: .25em;
 }
 
 .form-header h1{
@@ -62,7 +63,7 @@ border-radius: .25rem;
 }
 
 .form-lable{
-  /* display: block; */
+  
   width: 100%;
   background: white
 }
@@ -70,16 +71,15 @@ border-radius: .25rem;
 .form-date{
   border: none;
     color: #495057;
-  width: 100%;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    background-color: #fff;
     background-clip: padding-box;
-    /* border: 1px solid #ced4da; */
+    border: 1px solid #ced4da;
     border-radius: .25rem;
+  width: 100%;
     
    
 }
@@ -89,11 +89,21 @@ border-radius: .25rem;
 display: flex;
 align-items: flex-start;
 flex-direction: column;
-/* align-items: flex-end; */
+
 height: fit-content;
 margin: 0;
 padding: 0;
 
+}
 
 
+.text-muted{
+
+font-size: 0.75em;
+}
+
+.form-req{
+  background-color: green;
+  height: 50px;
+  width: 50px
 }

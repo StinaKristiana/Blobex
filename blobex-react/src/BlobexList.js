@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import data from './blobex.json'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
 import { Form, Col, Button, Row } from 'react-bootstrap'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
@@ -61,8 +62,13 @@ class BlobexList extends Component {
                                     {obj.header}
                                   </Form.Text>
                                   <Form.Control
+                                    required={obj.required}
                                     type={obj.type}
-                                    placeholder={obj.value}
+                                    placeholder={
+                                      isNaN(obj.value)
+                                        ? `${obj.value}`
+                                        : `€ ${obj.value}`
+                                    }
                                   />
                                 </Form.Group>
                               )
@@ -93,14 +99,13 @@ class BlobexList extends Component {
                                 Close Date
                               </Form.Text>
 
-                              <Form.Label className="form-lable">
-                                <DatePicker
-                                  className="form-date"
-                                  selected={this.state.startDate}
-                                  onChange={this.handleChange}
-                                  dateFormat="dd MMMM,yyyy"
-                                />
-                              </Form.Label>
+                              <DatePicker
+                                className="form-date"
+                                selected={this.state.startDate}
+                                onChange={this.handleChange}
+                                dateFormat="dd MMMM,yyyy"
+                              />
+
                               <Form.Text className="text-muted" />
                             </Form.Group>
                           </Col>
@@ -127,7 +132,7 @@ class BlobexList extends Component {
                               <Form.Text className="text-muted">Type</Form.Text>
                               <Form.Control
                                 className="search"
-                                placeholder=" New Costomer"
+                                placeholder="New Costomer"
                               />
                             </Form.Group>
                           </Col>
