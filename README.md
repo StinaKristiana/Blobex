@@ -1,10 +1,14 @@
 # Blobex Homework
 Simple and small business-form using React. 
-To launch the project, in the project directory run:
-npm install
+
+To launch the project, in the project directory run
+
+𝗻𝗽𝗺 𝗶𝗻𝘀𝘁𝗮𝗹𝗹
+
 Installs dependencies needed to run the app.
 
-npm start
+𝗻𝗽𝗺 𝘀𝘁𝗮𝗿𝘁
+
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
