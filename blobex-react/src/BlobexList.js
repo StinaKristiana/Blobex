@@ -55,7 +55,7 @@ class BlobexList extends Component {
 																	</Form.Text>
 																	<Form.Control
 																		type={obj.type}
-																		placeholder= {obj.value }
+																		placeholder={obj.value}
 																	/>
 																</Form.Group>
 															);
@@ -88,7 +88,6 @@ class BlobexList extends Component {
 																	onChange={this.handleChange}
 																	dateFormat="dd MMMM,yyyy"
 																/>
-																
 															</Form.Label>
 															<Form.Text className="text-muted" />
 														</Form.Group>
@@ -98,31 +97,29 @@ class BlobexList extends Component {
 												<Row style={{ margin: 0 }} className="form-sub-header">
 													<h2>Additional Information</h2>
 												</Row>
-												<Row style={{ padding: 0,  margin: 0}}>
-															<Col  >
-																<Form.Group>
-																	<Form.Text className="text-muted">
-																		Opportunity Owner
-																	</Form.Text>
-																	<Form.Control
-																		className="search"
-																		placeholder="Dolores G. Smith(May 23, 2014 12:45)"
-																	/>
-																</Form.Group>
-															</Col>
+												<Row style={{ padding: 0, margin: 0 }}>
+													<Col>
+														<Form.Group>
+															<Form.Text className="text-muted">
+																Opportunity Owner
+															</Form.Text>
+															<Form.Control
+																className="search"
+																placeholder="Dolores G. Smith(May 23, 2014 12:45)"
+															/>
+														</Form.Group>
+													</Col>
 
-																<Col  >
-																<Form.Group>
-																	<Form.Text className="text-muted">
-																		Type
-																	</Form.Text>
-																	<Form.Control
-																		className="search"
-																		placeholder=" New Costomer"
-																	/>
-																</Form.Group>
-															</Col>
-														</Row>
+													<Col>
+														<Form.Group>
+															<Form.Text className="text-muted">Type</Form.Text>
+															<Form.Control
+																className="search"
+																placeholder=" New Costomer"
+															/>
+														</Form.Group>
+													</Col>
+												</Row>
 											</div>
 										);
 									})}
