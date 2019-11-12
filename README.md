@@ -1,11 +1,11 @@
 # Blobex Homework
 Simple and small business-form using React. 
 
-<h2>To launch the project, in the project directory run</h2>
+To launch the project, in the project directory run
 
 𝗻𝗽𝗺 𝗶𝗻𝘀𝘁𝗮𝗹𝗹
 
-<h2>Installs dependencies needed to run the app.<h2>
+Installs dependencies needed to run the app.
 
 𝗻𝗽𝗺 𝘀𝘁𝗮𝗿𝘁
 
