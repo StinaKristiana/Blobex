@@ -17,7 +17,7 @@ class BlobexList extends Component {
 	};
 
 	render() {
-		console.log(this.state.startDate);
+		
 		return (
 			<div className="full-screen">
 				<div className="form-container">
