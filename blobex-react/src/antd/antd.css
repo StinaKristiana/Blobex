@@ -7,39 +7,33 @@
   justify-content: center;
   align-items: center;
   border-radius: .25rem;
-  border: 1px solid #ced4da;
 }
 
 
 .form-container{
   background-color: white;
-  /* padding: 0.5rem; */
-  width: 80%;
-  margin: 0;
+  width: 60%;
   border-radius: .7rem;
-  border: 1px solid #ced4da;
   box-shadow: 1px 1px 40px -15px rgba(0, 0, 0, 0.774);
-
 } 
+
 
 .form-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
-  padding: 0.5rem; 
   border-radius: .25em;
 }
 
 .form-header h1{
   color:#21A25F;
-  font-size: 2vh;
+  font-size: 1.2rem;
 margin: auto;
 font-weight: bold;
 border-radius: .25rem;
-
-
+padding: 0.3rem
 }
+
 
 .form-sub-header{
 background-color: #F2F7F4;
@@ -52,7 +46,7 @@ border-radius: .25rem;
 
 .form-sub-header h2{
 color: #21A25F;
-font-size: 1.5vh;
+font-size: 0.9rem;
 margin: auto 2%;
 padding: 5px 0;
 font-weight: bold;
@@ -62,48 +56,19 @@ border-radius: .25rem;
 
 }
 
-.form-lable{
-  
+.date-picker{
   width: 100%;
-  background: white
 }
 
-.form-date{
-  border: none;
-    color: #495057;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-  width: 100%;
-    
-   
+.text-muted label{
+color: grey;
+font-size: 0.8em;
+position: relative;
+top: 0.8rem;
 }
 
 
-.form-group{
-display: flex;
-align-items: flex-start;
-flex-direction: column;
-
-height: fit-content;
-margin: 0;
-padding: 0;
-
+::placeholder{
+  color: rgba(0, 0, 0, 0.8)!important;
 }
 
-
-.text-muted{
-
-font-size: 0.75em;
-}
-
-.form-req{
-  background-color: green;
-  height: 50px;
-  width: 50px
-}
