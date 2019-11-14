@@ -8,25 +8,25 @@
       "items": [
         {
           "type": "section",
-          "header": "Opportunity details",
+          "header": "Opportunity Details",
           "columns": 2,
 
           "items": [
             {
               "type": "input",
-              "label": "Opportunity name",
+              "label": "Opportunity Name",
               "value": "Acme - 1200 Widgets (Sample)",
               "required": true
             },
             {
               "type": "currency",
-              "label": "Ammount + currency",
+              "label": "Ammount + Currency",
               "value":   146,
               "symbol": "EUR"
             },
             {
               "type": "currency",
-              "label": "Another input",
+              "label": "Another Input",
               "value": 1400000,
               "symbol": "EUR",
               "precision": 2

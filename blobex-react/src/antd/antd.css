@@ -70,5 +70,16 @@ top: 0.8rem;
 
 ::placeholder{
   color: rgba(0, 0, 0, 0.8)!important;
+ 
+  
 }
 
+.btn {
+ 
+  border-radius: 25px
+}
+.ant-select-selection{
+ 
+ border-Left: 0.2rem solid green;
+ 
+}
