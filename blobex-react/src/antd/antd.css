@@ -12,7 +12,7 @@
 
 .form-container{
   background-color: white;
-  width: 60%;
+  /* width: 60%; */
   border-radius: .7rem;
   box-shadow: 1px 1px 40px -15px rgba(0, 0, 0, 0.774);
 } 

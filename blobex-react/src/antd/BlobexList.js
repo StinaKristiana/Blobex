@@ -11,24 +11,26 @@ const dateFormat = 'DD MMMM YYYY';
 const { Option } = Select;
 const { Search } = Input;
 
-
 class BlobexList extends Component {
 	state = {
-		validation: false
+		validation: false,
+		fields: [ true, true, true ]
 	};
 
 	onChange = (e) => {
-		this.setState({ validation: true});
+		let newFields = this.state.fields;
+		newFields[e] = false;
+
+		this.setState({ fields: [ ...newFields ] });
 	};
 
 	render() {
-
 		return (
 			<div className="full-screen">
 				<div className="form-container">
 					{data.Widgets.map((widgets) => {
 						return (
-							<Row gutter={[ 50, 5 ]}>
+							<Row key={data.Widgets.indexOf(widgets) * 9} gutter={[ 50, 5 ]}>
 								<Col span={24} className="form-header">
 									<Button className="btn" style={{ border: 0, color: 'salmon' }}>
 										Cancel
@@ -41,7 +43,7 @@ class BlobexList extends Component {
 
 								{widgets.items.map((details) => {
 									return (
-										<Col span={24}>
+										<Col span={24} key={widgets.items.indexOf(details) * 6}>
 											<Col span={24} className="form-sub-header">
 												<h2>{details.header}</h2>
 											</Col>
@@ -49,24 +51,33 @@ class BlobexList extends Component {
 												{details.items.map((obj) => {
 													return (
 														<Form.Item
+															key={details.items.indexOf(obj) * 69}
 															label={obj.label}
-															vertical
+															vertical="true"
 															className="text-muted"
-															validateStatus={this.state.validation ? '' : 'error'}
-															help={
-																this.state.validation ? (
+															validateStatus={
+																this.state.fields[details.items.indexOf(obj)] ? (
 																	''
 																) : (
-																	'Should be combination of numbers & alphabets'
+																	'error'
+																)
+															}
+															help={
+																obj.symbol === 'EUR' ||
+																this.state.fields[details.items.indexOf(obj)] ? (
+																	''
+																) : (
+																	`Should be combination of numbers & alphabets`
 																)
 															}
 														>
 															<Input
-																min="0"
-																max="140000"
+																// min="0"
+																// max="140000"
 																required
 																id="error"
-																onChange={this.onChange}
+																onChange={() =>
+																	this.onChange(details.items.indexOf(obj))}
 																style={
 																	obj.required ? (
 																		{ borderLeft: '0.2rem solid green' }
@@ -91,7 +102,7 @@ class BlobexList extends Component {
 											<Col span={12}>
 												<Form.Item
 													label="Stage + Probability (%)"
-													vertical
+													vertical="true"
 													className="text-muted"
 												>
 													<Select
@@ -119,10 +130,10 @@ class BlobexList extends Component {
 													</Select>
 												</Form.Item>
 												<Form.Item
-													minlength="4"
+													minLength="4"
 													required
 													label="Close Date"
-													vertical
+													vertical="true"
 													className="text-muted"
 												>
 													<DatePicker
@@ -136,13 +147,17 @@ class BlobexList extends Component {
 												<h2>Additional Information</h2>
 											</Col>
 											<Col span={12}>
-												<Form.Item label="Opportunity Owner" vertical className="text-muted">
+												<Form.Item
+													label="Opportunity Owner"
+													vertical="true"
+													className="text-muted"
+												>
 													<Search placeholder="Dolores G. Smith(May 23, 2014 12:45)" />
 												</Form.Item>
 											</Col>
 
 											<Col span={12}>
-												<Form.Item label="Type" vertical className="text-muted">
+												<Form.Item label="Type" vertical="true" className="text-muted">
 													<Input placeholder="New Customer" />
 												</Form.Item>
 											</Col>
